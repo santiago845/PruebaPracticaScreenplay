@@ -2,10 +2,12 @@ package com.santiago845.screenplay.stepdefinitions;
 
 import com.santiago845.screenplay.model.ClientInformation;
 import com.santiago845.screenplay.model.SwagLabsAccount;
+import com.santiago845.screenplay.questions.PurchaseConfirmation;
 import com.santiago845.screenplay.tasks.Checkout;
 import com.santiago845.screenplay.tasks.Login;
 import com.santiago845.screenplay.tasks.OpenSwagLabsWebPageOn;
 import com.santiago845.screenplay.tasks.SelectProducts;
+import com.santiago845.screenplay.utils.Constants;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -13,8 +15,10 @@ import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import java.util.List;
+import org.hamcrest.Matchers;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 public class ProductsPurchaseStepDefinitions {
 
@@ -47,6 +51,8 @@ public class ProductsPurchaseStepDefinitions {
 
     @Then("^he can finish the checkout seeing the successful purchase status$")
     public void heCanFinishTheCheckoutSeeingTheSuccessfulPurchaseStatus() {
+
+        theActorInTheSpotlight().should(seeThat(PurchaseConfirmation.message(), Matchers.containsString(Constants.VALIDATION_MESSAGE)));
 
     }
 

@@ -5,8 +5,8 @@ Feature: Products purchase in Swag Labs web page
   @PurchaseOfTwoProductsSelected
   Scenario: Successful purchase of two products into the Swag Labs web page
     Given the winner client has the access credentials to login into application
-      | user              | password     |
-      | standard_user     | secret_sauce |
+      | user           | password      |
+      | standard_user  | secret_sauce  |
     When he selects two articles of product list
       | firstName  | lastName  | zipPostalCode |
       | Laura      | Rendon    | 000456        |
