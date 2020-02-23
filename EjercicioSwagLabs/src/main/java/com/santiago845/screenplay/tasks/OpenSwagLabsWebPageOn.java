@@ -11,8 +11,7 @@ public class OpenSwagLabsWebPageOn implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(
-                url(WEB_PAGE));
+        actor.attemptsTo(url(WEB_PAGE));
     }
 
     public static OpenSwagLabsWebPageOn theBrowser() {

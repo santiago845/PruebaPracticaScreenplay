@@ -8,4 +8,6 @@ Feature: Products purchase in Swag Labs web page
       | user              | password     |
       | standard_user     | secret_sauce |
     When he selects two articles of product list
+      | firstName  | lastName  | zipPostalCode |
+      | Laura      | Rendon    | 000456        |
     Then he can finish the checkout seeing the successful purchase status

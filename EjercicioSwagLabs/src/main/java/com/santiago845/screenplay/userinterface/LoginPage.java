@@ -8,14 +8,9 @@ import static net.serenitybdd.screenplay.targets.Target.the;
 public class LoginPage {
 
     public static final Target USERNAME = the("username field")
-            .located(By.id("email"));
+            .located(By.id("user-name"));
 
     public static final Target PASSWORD = the("password field")
-            .located(By.name("password"));
+            .located(By.id("password"));
 
-    public static final Target CONFIRM_PASSWORD = the("confirmPassword field")
-            .located(By.name("confirmPassword"));
-
-    public static final Target REGISTER = the("register button")
-            .located(By.name("register"));
 }

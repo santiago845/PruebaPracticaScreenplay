@@ -1,10 +1,10 @@
 package com.santiago845.screenplay.model;
 
-public class User {
+public class SwagLabsAccount {
     private final String username;
     private final String password;
 
-    public User(String username, String password) {
+    public SwagLabsAccount(String username, String password) {
         this.username = username;
         this.password = password;
     }
